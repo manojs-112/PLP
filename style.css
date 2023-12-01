@@ -1,36 +1,127 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:300");
-html,
-body {
-  height: 100%;
-  width: 100%;
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to right bottom, #873572, black);
+  flex-direction: column;
 }
-a {
-  display: inline-block;
-  color: lightgrey;
-  font-size: 16px;
-  font-family: "Roboto", sans-serif;
-  white-space: nowrap;
+
+.search-container {
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+#search-input {
+  padding: 7px 100px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+}
+.newTag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 102px;
+  position: absolute;
+  background-color: #9edb3a;
+  font-weight: 700;
+  height: 27px;
+  margin: 5px;
+  border-radius: 0px 10px 10px 10px;
+  box-shadow: 0px 2px 5px #292727;
+}
+
+.item-size {
+  list-style: none;
+  margin:2px 5px;
+  padding: 8px;
+  margin: 5px;
+  font-weight: 700;
+  height: 34px;
+  width: 85%;
+  border-radius: 5px;
+  /* background-color: rgb(214, 252, 139); */
+  box-shadow: 0px 0px 2px #292727;
+}
+
+.listView {
+  width: 630px;
+  height: 1400px;
+  border: 1px solid #000000;
+  border-radius: 7px;
   padding: 12px;
-  border: 1px solid white;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: all 0.15s ease-in-out;
+  box-shadow: 0px 5px 5px 0px #00000040;
 }
 
-a:hover {
-  background: rgba(0, 0, 0, 0.23);
-  color: white;
-  transform: scale(1.03);
-  text-decoration: none;
-}
-a:active {
-  transform: scale(0.98);
+.gridView {
+  width: 580px;
+  height: 1256px;
+  display: grid;
+  grid-template-columns: auto auto;
+  border: 1px solid #000000;
+  border-radius: 7px;
+  padding: 1.6rem;
+
 }
 
+.gridView .card {
+  width: 251px;
+  height: 376px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 5px 5px 0px #00000040;
+}
+
+.listView > .card > .icon > img {
+  width: 175px;
+}
+.gridView > .card > .icon > img {
+  width: 215px;
+  height: 206px;
+}
+.gridView > .card > .icon > span {
+  margin-left: 140px;
+}
+.card-body {
+  width: 100%;
+}
+
+.title {
+  text-align: start;
+  margin-top: 15px;
+  text-transform: uppercase;
+  font-size: 700;
+}
+
+.listView .card {
+  height: 215px;
+  margin: 15px 10px;
+  display: flex;
+  flex-direction: row;
+  background-color: #f3f5f5;
+}
+.listView .icon {
+  padding: 1.25rem;
+}
+
+@media screen and(max-width:500px) {
+  .listView {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
