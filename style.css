@@ -118,10 +118,10 @@ h1 {
   padding: 1.25rem;
 }
 
-@media screen and(max-width:500px) {
-  .listView {
-    display: flex;
-    flex-wrap: wrap;
+@media screen and (max-width: 500px) {
+  .listView,
+  .gridView {
     width: 100%;
+    max-width: none; /* Remove maximum width on smaller screens */
   }
 }
